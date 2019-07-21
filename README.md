@@ -28,6 +28,7 @@ This system requires the following to be installed:
 
 ## Run 
 - To start the program: `python app.py`
+
 The app will start on default port 5000
 
 ## APIs:
