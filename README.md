@@ -12,14 +12,31 @@ Your API must provides these end points:
 - Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 - Given 1 people, provide a list of fruits and vegetables they like. This endpoint must respect this interface for the output: `{"username": "Ahi", "age": "30", "fruits": ["banana", "apple"], "vegetables": ["beetroot", "lettuce"]}`
 
-## Delivery
-To deliver your system, you need to send the link on GitHub. Your solution must provide tasks to install dependencies, build the system and run. Solutions that does not fit this criteria **will not be accepted** as a solution. Assume that we have already installed in our environment Java, Ruby, Node.js, Python, MySQL, MongoDB and Redis; any other technologies required must be installed in the install dependencies task. Moreover well tested and designed systems are one of the main criteria of this assessement 
+## Requirements
+This system requires the following to be installed:
+- Python 3
+- MongoDB
 
-## Evaluation criteria
-- Solutions written in Python would be preferred.
-- Installation instructions that work.
-- During installation, we may use different companies.json or people.json files.
-- The API must work.
-- Tests
+## Setup 
+- Create a virtual environment: `python -m venv venv`
+- Activate the virtual environment: `source venv/bin/activate`
+- Install all dependencies into the virtual environment: `pip install -r requirements.txt`
 
-Feel free to reach to your point of contact for clarification if you have any questions.
+## Run unit tests
+- To run all the unit tests: `python test_app.py`
+
+## Run 
+- To start the program: `python app.py`
+
+## APIs:
+- Given a company, the API needs to return all their employees. Provide the appropriate solution if the company does not have any employees:
+`/companies/<company_index>/employees`
+- Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
+`/people/filtered_common_friends?first_id=<first_person_index>&second_id=<second_person_index>`
+- Given 1 people, provide a list of fruits and vegetables they like. This endpoint must respect this interface for the output: {"username": "Ahi", "age": "30", "fruits": ["banana", "apple"], "vegetables": ["beetroot", "lettuce"]}
+`/people/<person_index>/favouriteFood`
+
+## Assumptions and Limitations
+- This system assumes that the list of vegetables and fruits are only limited to those provided by the sample resources file. Any new type won't be recognized because there is no way to tell if one is vegetable or fruit based on the name alone.
+- Current settings is mostly for development environment.
+- For the 3rd API, it is not clear what username is so name is used for username.
