@@ -33,10 +33,13 @@ The app will start on default port 5000
 
 ## APIs:
 - Given a company, the API needs to return all their employees. Provide the appropriate solution if the company does not have any employees:
+
 `/companies/<company_index>/employees`
-- Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
+- Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive:
+
 `/people/filtered_common_friends?first_id=<first_person_index>&second_id=<second_person_index>`
-- Given 1 people, provide a list of fruits and vegetables they like. This endpoint must respect this interface for the output: {"username": "Ahi", "age": "30", "fruits": ["banana", "apple"], "vegetables": ["beetroot", "lettuce"]}
+- Given 1 people, provide a list of fruits and vegetables they like. This endpoint must respect this interface for the output: {"username": "Ahi", "age": "30", "fruits": ["banana", "apple"], "vegetables": ["beetroot", "lettuce"]}:
+
 `/people/<person_index>/favouriteFood`
 
 ## Assumptions and Limitations
