@@ -18,6 +18,7 @@ This system requires the following to be installed:
 - MongoDB
 
 ## Setup 
+- Start local mongodb on port 27017 `mongod --port 27017`
 - Create a virtual environment: `python -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
 - Install all dependencies into the virtual environment: `pip install -r requirements.txt`
@@ -27,6 +28,7 @@ This system requires the following to be installed:
 
 ## Run 
 - To start the program: `python app.py`
+The app will start on default port 5000
 
 ## APIs:
 - Given a company, the API needs to return all their employees. Provide the appropriate solution if the company does not have any employees:
